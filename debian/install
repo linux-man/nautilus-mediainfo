@@ -1,2 +1,2 @@
-nautilus-extension/nautilus-mediainfo.py usr/share/nautilus-python/extensions
+nautilus-extension/* usr/share/nautilus-python/extensions
 

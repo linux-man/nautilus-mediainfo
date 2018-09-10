@@ -1,6 +1,8 @@
 #!/usr/bin/python
 #coding: utf-8
 
+import locale, os
+
 try:
     from urllib import unquote
 except ImportError:
@@ -9,6 +11,13 @@ except ImportError:
 from gi.repository import Nautilus, GObject, Gtk
 
 from MediaInfoDLL import *
+
+lang = locale.getdefaultlocale()[0]
+locale_path = os.path.join(os.path.dirname(__file__), "nautilus-mediainfo/locale")
+locale_file = os.path.join(locale_path, lang+".csv")
+if(not os.path.isfile(locale_file)):
+  lang = lang.split("_")[0]
+  locale_file = os.path.join(locale_path, lang+".csv")
 
 GUI = """
 <interface>
@@ -58,6 +67,7 @@ class Mediainfo(GObject.GObject, Nautilus.PropertyPageProvider):
     MI = MediaInfo()
     MI.Open(filename.decode("utf-8"))
     MI.Option_Static("Complete")
+    MI.Option_Static("Language", "file://{}".format(locale_file))
     info = MI.Inform().splitlines()
     if len(info) < 8:
       return
