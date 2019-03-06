@@ -1,3 +1,9 @@
+nautilus-mediainfo (0.3) bionic; urgency=medium
+
+  * Added an exclude list to hide specific tags
+
+ -- Caldas Lopes <joao.caldas.lopes@gmail.com>  Wed, 06 Mar 2019 12:00:25 +0100
+
 nautilus-mediainfo (0.2) xenial; urgency=medium
 
   * Translations from MediaInfo
