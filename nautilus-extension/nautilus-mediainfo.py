@@ -67,10 +67,12 @@ class Mediainfo(GObject.GObject, Nautilus.PropertyPageProvider):
     filename = unquote(file.get_uri()[7:])
 
     MI = MediaInfo()
-    MI.Open(filename.decode("utf-8"))
     MI.Option_Static("Complete")
+    MI.Option_Static("Inform", "Nothing")
     MI.Option_Static("Language", "file://{}".format(locale_file))
+    MI.Open(filename)
     info = MI.Inform().splitlines()
+    MI.Close()
     if len(info) < 8:
       return
 
