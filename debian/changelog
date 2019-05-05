@@ -1,3 +1,11 @@
+nautilus-mediainfo (1.0) bionic; urgency=medium
+
+  * Force plain text output
+  * Call static options before opening file
+  * Close MediaInfo object
+
+ -- Caldas Lopes <joao.caldas.lopes@gmail.com>  Sun, 05 May 2019 23:46:12 +0100
+
 nautilus-mediainfo (0.3) bionic; urgency=medium
 
   * Added an exclude list to hide specific tags
