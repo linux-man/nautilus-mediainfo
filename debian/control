@@ -16,6 +16,6 @@ Priority: extra
 Depends: ${python:Depends},
          ${misc:Depends},
          nautilus,
-         python-nautilus,
-         python-mediainfodll
+         python3-nautilus,
+         python3-mediainfodll
 Description: View media information from the properties tab
