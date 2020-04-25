@@ -1,3 +1,9 @@
+nautilus-mediainfo (1.0.3) focal; urgency=medium
+
+  * Mediainfo 3 dependency
+
+ -- Caldas Lopes <joao.caldas.lopes@gmail.com>  Fri, 25 Apr 2020 03:05:23 +0100
+
 nautilus-mediainfo (1.0.2) focal; urgency=medium
 
   * Python 3 dependencies

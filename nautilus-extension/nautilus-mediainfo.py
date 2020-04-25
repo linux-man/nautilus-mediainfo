@@ -10,7 +10,7 @@ except ImportError:
 
 from gi.repository import Nautilus, GObject, Gtk
 
-from MediaInfoDLL import *
+from MediaInfoDLL3 import *
 
 lang = locale.getdefaultlocale()[0]
 locale_path = os.path.join(os.path.dirname(__file__), "nautilus-mediainfo/locale")
