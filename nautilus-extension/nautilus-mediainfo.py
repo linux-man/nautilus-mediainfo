@@ -101,6 +101,7 @@ class Mediainfo(GObject.GObject, Nautilus.PropertyPageProvider):
         label.set_halign(Gtk.Align.START)
         label.set_selectable(True)
         label.set_line_wrap(True)
+        label.set_line_wrap_mode(2) #PANGO_WRAP_WORD_CHAR
         label.show()
         self.grid.attach(label, 1, top, 1, 1)
         top += 1
